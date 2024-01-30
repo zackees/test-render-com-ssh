@@ -1,4 +1,4 @@
-FROM nikolaik/python-nodejs:python3.11-nodejs20-alpine
+FROM python:3.11
 
 # create directory for the app user
 # RUN mkdir -p /home/app
