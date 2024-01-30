@@ -29,4 +29,4 @@ USER app
 RUN touch $HOME/.ssh/foobar.txt
 
 # Collect static files
-CMD ["/bin/bash", "python -m http.server"]
+CMD ["/bin/bash", "python3 -m http.server"]
