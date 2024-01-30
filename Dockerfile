@@ -23,5 +23,7 @@ USER app
 # Verify write access to the .ssh folder
 RUN touch $HOME/.ssh/foobar.txt
 
+EXPOSE 80
+
 # Collect static files
 CMD ./start

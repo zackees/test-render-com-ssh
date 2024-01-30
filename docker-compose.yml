@@ -1,0 +1,10 @@
+version: '3.3'
+
+services:
+  app:
+    build:
+      context: .
+      args:
+        SSH_PASS: ${SSH_PASS:-tssx2hJr229Xo8WpOyKmR0cZBqvl7n}
+    ports:
+      - "8000:80"
