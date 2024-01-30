@@ -27,3 +27,4 @@ EXPOSE 80
 
 # Collect static files
 CMD ./start
+
