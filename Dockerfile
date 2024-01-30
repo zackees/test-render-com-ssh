@@ -1,10 +1,7 @@
 FROM python:3.11
 
-# create directory for the app user
-# RUN mkdir -p /home/app
-
 # create the app user
-RUN addgroup --system app && adduser --ingroup app --home /home/app --shell /bin/sh app
+RUN addgroup --system app && adduser --system --ingroup app --home /home/app --shell /bin/sh --disabled-password app
 
 # create the appropriate directories
 ENV HOME=/home/app
@@ -13,8 +10,6 @@ RUN mkdir $APP_HOME
 # Setup empty ~/.ssh directory
 RUN mkdir $HOME/.ssh
 WORKDIR $APP_HOME
-
-
 
 # copy project
 COPY . $APP_HOME
